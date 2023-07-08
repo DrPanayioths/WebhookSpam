@@ -10,6 +10,10 @@ contentofspam = {'content': drp}
 print("Made By DrPanayioths For Testing Purposes")
 time.sleep(5)
 
+spamprotocol = input("How Many Times You Want To Spam The Webhook?")
+
+spamprotocol = int(spamprotocol)
+
 ## Change The Number after the range for the Spam
-for x in range(15):
+for x in range(int(spamprotocol)):
     x  = requests.post(url, json = contentofspam,)
