@@ -11,25 +11,24 @@ import requests
 
 
 ## Url Of The Webhook
-url = 'Change With Webhook URL'
+url = 'Change This To Your Discord Webhook URL'
 
 ## Input The Text To System For Testing Purpose
-drp = input("Enter The Text" + ": ")
-contentofspam = {'content': drp}
-
-## Print Credits
-print("Made By DrPanayioths For Testing Purposes")
-time.sleep(5)
+text = input("Enter The Text" + ": ")
+contentofspam = {'content': text}
 
 ## Protocol How Many Times You Want To Spam The Webhook
-spamprotocol = input("How Many Times You Want To Spam The Webhook? ")
+spamprotocol = input("How Many Times You Want To Spam The Webhook?: ")
 
 ## Change From String To Integer
 spamprotocol = int(spamprotocol)
 
 ## Change The Number after the range for the Spam
+number_requests = 0
 for x in range(int(spamprotocol)):
     x  = requests.post(url, json = contentofspam,)
+    number_requests += 1
+    print(str(number_requests) + " Messages Transmitted")
     
     
     
