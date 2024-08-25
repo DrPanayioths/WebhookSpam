@@ -1,19 +1,9 @@
-import sys
-import time
-import subprocess
-
-
-## Automatically Install The Requests Package:
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
-'requests'])
-
 import requests
 
-
-## Url Of The Webhook
+## URL Of Webhook
 url = 'Change This To Your Discord Webhook URL'
 
-## Input The Text To System For Testing Purpose
+## Capture Of Text
 text = input("Enter The Text" + ": ")
 contentofspam = {'content': text}
 
